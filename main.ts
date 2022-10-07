@@ -19,7 +19,13 @@ input.onPinTouchEvent(TouchPin.P1, input.buttonEventDown(), function () {
 })
 input.onButtonEvent(Button.A, input.buttonEventClick(), function () {
     if (showDot == 0) {
-        basic.showIcon(IconNames.Angry)
+        basic.showLeds(`
+            # . . . #
+            . # . # .
+            . . . . .
+            # # # # #
+            # . # . #
+            `)
         basic.clearScreen()
     }
 })
@@ -40,9 +46,27 @@ input.onButtonEvent(Button.AB, input.buttonEventClick(), function () {
 })
 input.onButtonEvent(Button.B, input.buttonEventClick(), function () {
     if (showDot == 0) {
-        basic.showIcon(IconNames.SmallHeart)
-        basic.showIcon(IconNames.Heart)
-        basic.showIcon(IconNames.SmallHeart)
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . # # # .
+            . . # . .
+            . . . . .
+            `)
+        basic.showLeds(`
+            . # . # .
+            # # # # #
+            # # # # #
+            . # # # .
+            . . # . .
+            `)
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . # # # .
+            . . # . .
+            . . . . .
+            `)
         basic.clearScreen()
     }
 })
